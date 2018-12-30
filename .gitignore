@@ -1,0 +1,5 @@
+# Ignore PhpStorm files
+/.idea/
+
+# Ignore files under Mac
+.DS_Store
