@@ -25,8 +25,10 @@ RUN \
     supervisor              && \
   mkdir -p /run/php           && \
   rm -rf /var/lib/apt/lists/* && \
-  pecl install swoole                                                            && \
+  pecl install redis swoole                                                      && \
+  echo "extension=redis.so"  > /etc/php/${PHP_VERSION}/mods-available/redis.ini  && \
   echo "extension=swoole.so" > /etc/php/${PHP_VERSION}/mods-available/swoole.ini && \
+  phpenmod -s fpm redis                                                          && \
   phpenmod -s cli swoole                                                         && \
   curl                    \
     -sf                   \
