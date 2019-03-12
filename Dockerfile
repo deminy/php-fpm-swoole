@@ -31,8 +31,8 @@ RUN \
   pecl update-channels && \
   pecl install            \
       redis-4.2.0         \
-      swoole-4.2.13    && \
-  mkdir -p /run/php && \
+      swoole-4.3.0     && \
+  mkdir -p /run/php    && \
   curl                    \
     -sf                   \
     --connect-timeout 5   \
