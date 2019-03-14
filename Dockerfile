@@ -31,7 +31,7 @@ RUN \
   pecl update-channels && \
   pecl install            \
       redis-4.2.0         \
-      swoole-4.3.0     && \
+      swoole-4.3.1     && \
   mkdir -p /run/php    && \
   curl                    \
     -sf                   \
